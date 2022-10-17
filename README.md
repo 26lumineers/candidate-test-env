@@ -31,6 +31,8 @@
 ```bash
 $ npm install
 ```
+## Postman env URL
+https://documenter.getpostman.com/view/11040191/2s847CvZyJ
 
 ## Running the app
 
