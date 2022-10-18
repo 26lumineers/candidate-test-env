@@ -1,0 +1,344 @@
+{
+	"info": {
+		"_postman_id": "f3053b6b-dea9-43ea-b838-d5ca164a2d42",
+		"name": "candidate-test-env",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11040191"
+	},
+	"item": [
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Sign in",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZpbG0xIiwiaWF0IjoxNjY1NzU3NjIyLCJleHAiOjE2NjU3NjEyMjJ9.tm1em8JvfqY8Nz2LsDmO_N8uAgL-LoHG9PZqZ2urr7g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "film1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "film1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5500/v1/auth/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"v1",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Services",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5500/service/services",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"service",
+						"services"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Service By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5500/v1/services/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"v1",
+						"services",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Booking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5500/v1/services/2/booking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"v1",
+						"services",
+						"2",
+						"booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View All Ordered from users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5500/v1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"v1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "fullName",
+							"value": "bobo",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "bobo1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5500/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Services",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "บริการซักอกรีบด่วนๆ 40นาที",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "300",
+							"type": "text"
+						},
+						{
+							"key": "picture",
+							"value": "https://example.com/img333",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "ใบไม้ยังร่วง นับประสาอะไรกับคนง่วงอย่างเรา",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5500/service/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"service",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5500/v1/14",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"v1",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order's User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZpZDIiLCJpYXQiOjE2NjU5MjY5OTQsImV4cCI6MTY2NTkzMDU5NH0.sY-aEebdImgbkeG_a2ojK09mYJ-CS1_yGOMlmLtooWQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5500/orders/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"orders",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5500/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete order by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5500/v1/orders/5f0b415d-430a-47e7-847e-e13198a9f6e8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"v1",
+						"orders",
+						"5f0b415d-430a-47e7-847e-e13198a9f6e8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Servicce by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5500/v1/services/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"v1",
+						"services",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
